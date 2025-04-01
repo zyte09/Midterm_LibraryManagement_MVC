@@ -52,5 +52,19 @@ namespace LibraryManagement_MVC.Controllers
                 return Json(new { sucess = false, message = ex.Message });
             }
         }
+
+        [HttpPost]
+        public IActionResult DeleteBook(int id)
+        {
+            try
+            {
+                bool result = _bookservice.Delete(id);
+                return Json(new { sucess = result, message = result ? "Book Deleted Sucessfully" : "Failed to Delete Book" });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
     }
 }
