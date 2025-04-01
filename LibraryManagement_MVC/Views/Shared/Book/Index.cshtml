@@ -1,0 +1,27 @@
+﻿@model IEnumerable<LibraryManagement_MVC.Models.BusLogic.Model.tblBook>
+<div>
+	<h2>Book List</h2>
+	<a href="/Book/AddNewBook">Add New Book</a>
+	<table>
+		<tr>
+			<th>Book Name</th>
+			<th>Author</th>
+			<th>Category</th>
+			<th>Date Published</th>
+		</tr>
+
+		@foreach (var book in Model)
+		{
+			<tr>
+				<td>@book.bookName</td>
+				<td>@book.author</td>
+				<td>@book.category</td>
+				<td>@book.datePublished</td>
+				<td>
+					<a href="/Student/EditBook">Edit</a>
+					<a href="/Student/DeleteBook">Delete</a>
+				</td>
+			</tr>
+		}
+	</table>
+</div>

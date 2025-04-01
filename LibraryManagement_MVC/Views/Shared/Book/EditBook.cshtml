@@ -1,0 +1,32 @@
+﻿@model LibraryManagement_MVC.BusLogic.Model.tblBook
+
+<div>
+	<h2>Update Student</h2>
+	<form id="updateBookForm">
+		<input type="hidden" id="id" value="@Model.id" name="id" />
+		<div>
+			<label for="bookName">Book Name</label>
+			<input type="text" id="bookName" name="bookName" value="@Model.bookName" />
+		</div>
+
+		<div>
+			<label for="author">Author</label>"
+			<input type="text" id="author" name="author" value="@Model.author" />
+		</div>
+
+		<div>
+			<label for="category">Category</label>
+			<input type="text" id="category" name="category" value="@Model.category" />
+		</div>
+
+		<div>
+			<label for="datePublished">Date Published</label>
+			<input type="date" id="datePublished" name="datePublished" value="Model.datePublished" />
+		</div>
+
+		<div>
+			<button type="submit">Update Book</button>
+			<a href="Book/Index">Cancel</a>
+		</div>
+	</form>
+</div>	
